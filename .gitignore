@@ -1,0 +1,25 @@
+# Dossier de dépendances node
+/node_modules
+
+# Fichiers de log, cache, etc.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+.stylelintcache
+
+# Dossiers de build (générés par la compilation)
+/dist
+/out
+/build
+
+# Fichiers générés par Angular CLI
+.angular/cache
+.env
+.idea
+.vscode
+.sass-cache
+/coverage
+/e2e
+src/web-app/
