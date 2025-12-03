@@ -1,0 +1,10 @@
+<div class="SearchBar">
+  <input
+    type="text"
+    [placeholder]="placeholderText"
+    #inputRef
+    (keyup.enter)="emitSearch(inputRef.value)"
+  />
+
+  <img src="Loupe.png" (click)="emitSearch(inputRef.value)" style="cursor: pointer" />
+</div>

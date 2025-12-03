@@ -1,0 +1,18 @@
+<div class="jokeList">
+  <div class="text">
+    <img src="Bubble.png" class="Bubble" />
+    <ng-container *ngIf="joke$ | async as joke">
+      <p>{{ joke }}</p>
+    </ng-container>
+  </div>
+  <img src="Norris.png" class="Norris" />
+</div>
+<div class="buttons">
+  <app-button buttonText="Nouvelle blague aléatoire" class="button" (click)="fetchNewJoke()" />
+
+  <app-search-bar
+    placeholderText="Recherchez une blague..."
+    (searchSubmit)="fetchSearchJoke($event)"
+    class="norrisBar"
+  ></app-search-bar>
+</div>

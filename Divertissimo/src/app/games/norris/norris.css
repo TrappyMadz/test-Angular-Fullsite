@@ -1,0 +1,38 @@
+.Bubble {
+  width: 800px;
+}
+
+.Norris {
+  width: 300px;
+  height: fit-content;
+  align-self: flex-end;
+}
+
+.jokeList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.text {
+  position: relative;
+  color: black;
+}
+
+.text p {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+}
+
+.buttons {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}

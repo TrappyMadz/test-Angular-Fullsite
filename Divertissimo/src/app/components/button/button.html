@@ -1,0 +1,11 @@
+@if (!(buttonLink == null)) {
+<a class="globalButton" href="{{ buttonLink }}">
+  <button>{{ buttonText }}</button>
+  <span>↪</span>
+</a>
+} @if (buttonLink == null) {
+<div class="globalButton">
+  <button>{{ buttonText }}</button>
+  <span>↪</span>
+</div>
+}

@@ -1,0 +1,9 @@
+main {
+  position: relative;
+  top: 100%;
+}
+
+app-button {
+  display: block;
+  width: 70%;
+}

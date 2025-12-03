@@ -1,0 +1,19 @@
+<div class="memory">
+  <div class="game">
+    <h2>Tour du joueur {{ playerTurn }} :</h2>
+    <div id="cards">
+      <app-card
+        *ngFor="let cardValue of cards"
+        [cardNumber]="cardValue"
+        [game]="this"
+        (cardFlipped)="handleCardClick($event)"
+      ></app-card>
+    </div>
+    <div class="points">
+      <p>Joueur 1 : {{ player1Point }}</p>
+      <p>Joueur 2 : {{ player2Point }}</p>
+    </div>
+    <h1 *ngIf="isGameFinished">{{ winner }}</h1>
+  </div>
+  <app-button buttonText="Recommencer" (click)="Reload()"></app-button>
+</div>

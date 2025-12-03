@@ -1,0 +1,64 @@
+.card-container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  perspective: 100%; /* 1. ESSENTIEL pour l'effet 3D */
+}
+
+.card-inner {
+  border: 4px solid black;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* 2. ESSENTIEL pour la rotation des enfants */
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* 3. ESSENTIEL pour masquer la face opposée */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Face par défaut (le dos de la carte) */
+.back {
+  background-color: #4f46e5;
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
+
+/* Face cachée (la valeur) */
+.front {
+  background-color: white;
+  transform: rotateY(180deg); /* 4. Tournée de 180° au repos */
+}
+
+/* --- ANIMATION : LORSQUE .flipped EST APPLIQUÉ --- */
+
+.card-inner.flipped {
+  transform: rotateY(180deg); /* L'élément entier tourne */
+}
+
+/* Style de la valeur de la carte */
+.card-value {
+  font-size: 3em;
+  font-weight: bold;
+}
+/* Votre img/back.png peut aller dans .back si vous voulez une image spécifique */
+.back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+}

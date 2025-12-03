@@ -1,0 +1,11 @@
+<div class="card-container" (click)="flipCard()" [class.found]="isFound">
+  <div class="card-inner" [class.flipped]="!isHidden || isFound">
+    <div class="card-face back">
+      <img src="back.png" alt="Dos de carte" />
+    </div>
+
+    <div class="card-face front">
+      <img class="card-value" src="{{ cardNumber }}" />
+    </div>
+  </div>
+</div>

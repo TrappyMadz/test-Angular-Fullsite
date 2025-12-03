@@ -1,0 +1,35 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="">Accueil</a>
+      </li>
+      @if (!isLoggedIn) {
+      <li>
+        <a href="login">Connexion</a>
+      </li>
+      } @if (isLoggedIn) {
+      <li>
+        <a href="profile">Profile</a>
+      </li>
+      }
+      <li>
+        <a href="leaderboard">Classement</a>
+      </li>
+      <li class="unscrolling">
+        <a href="games">Jeux</a>
+        <ul class="under">
+          <li>
+            <a href="games/memory">Memory</a>
+          </li>
+          <li>
+            <a href="games/norris">Blagues de Norris</a>
+          </li>
+          <li>
+            <a href="games/name">Jeu du nom</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,36 @@
+button {
+  background-color: hsl(240, 7%, 14%);
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 85%;
+  cursor: pointer;
+  border: none;
+}
+
+span {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 0 10px;
+  background-color: #6dcff6;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globalButton {
+  display: flex;
+  text-decoration: none;
+  border-radius: 0 15px 0 15px;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+}
+
+.globalButton:hover > button {
+  background-color: #373337;
+}
+
+.globalButton:hover > span {
+  background-color: #417c94;
+}
